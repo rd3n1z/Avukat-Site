@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    color: var(--main-text);
+}
+
+:root {
+    --main-titles: #003366;
+    --side-titles: #0066cc;
+    --main-text: #333333;
+    --side-text: #666666;
+    --main-button: #0066cc;
+    --button-text: #ffffff;
+    --button-hover: #99ccff;
+    --background-color: #ffffff;
+    --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    --side-background-color: #cccccc;
+}
+
+
+#navbar {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 1px 1px 5px rgb(151, 151, 151);
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.nav-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+h1, #navbar, .nav-links, a{
+    background-color: var(--background-color);
+}
+
+
+#main {
+    background-color: var(--side-background-color);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+
+#portrait {
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: 10px solid var(--main-titles);
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+    font-size: 27px;
+    color: var(--main-text)
+}
+
+.info h2 {
+    color: var(--main-titles);
+    text-shadow: var(--text-shadow);
+}
+
+p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#about, #services h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#about {
+    margin: 100px 0;
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+    padding: 20px;
+}
+
+
+.cards h3, #services h1 {
+    color: var(--main-titles);
+    text-shadow: var(--text-shadow);
+    font-size: 30px;
+}
+
+#services {
+    padding: 200px;
+    background-color: var(--side-background-color);
+}
+
+#services h1 {
+    background-color: var(--side-background-color);
+    font-size: 35px;
+}
+
+.card {
+    max-width: 300px;
+    height: auto;
+    min-height: 600px;
+    padding: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card p{
+    height: 400px;
+    font-size: 23px;
+}
+
+.ser p {
+    height: 100px;
+    font-size: 23px;
+}
+
+.ser {
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: background-color 0.3s ease;
+    background-color: white;
+}
+
+/*HOVER ANIMASYONLARI*/
+
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    width: 150px;
+    text-align: center;
+    background-color: var(--background-color); /* Başlangıç rengi */
+    color: var(--side-titles); /* Başlangıç metin rengi */
+    border-radius: 24px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Geçiş efektleri */
+}
+
+a:hover {
+    color: var(--background-color);
+    text-shadow: var(--text-shadow);
+    background-color: #0066cc;
+}
+
+h1 {
+    color: var(--main-titles);
+    text-shadow: var(--text-shadow);
+    font-size: 40px;
+    background-color: var(--background-color);
+    transition: color 0.3s ease; /* h1 için geçiş efekti */
+}
+
+h1:hover {
+    cursor: pointer;
+    color: var(--side-titles); /* Hover efekti */
+}
+
+button {
+    background-color: var(--main-button);
+    color: var(--button-text);
+    width: 200px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 25px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    color: var(--button-text);
+    cursor: pointer;
+}
+
+.ser:hover, .card:hover {
+    transform: scale(1.1);
+    cursor: pointer; /* Hover efekti */
+    background-color: var(--main-button);
+    color: white;
+}
